@@ -4,7 +4,7 @@
 
 /* ── HERO ──────────────────────────────────── */
 .hero-section {
-  min-height: auto;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   background: var(--white);
@@ -17,8 +17,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 64px;
-  padding-top: 50px;
-  padding-bottom: 70px;
+  padding-top: 40px;
+  padding-bottom: 60px;
 }
 
 /* Photo */
