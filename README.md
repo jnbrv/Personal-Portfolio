@@ -11,11 +11,10 @@ This portfolio serves as a central hub for my professional projects, contributio
 - Curated collection of projects
 - Detailed documentation of work experience
 - Showcase of technical skills
-- Links to live demos and repositories
 
 ## Getting Started
 
-Visit the portfolio to explore my work and learn more about my professional background.
+Visit the portfolio to explore my work and learn more about my background.
 
 ## Contact
 
