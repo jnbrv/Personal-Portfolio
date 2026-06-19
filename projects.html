@@ -6,12 +6,12 @@
   <title>Projects — Joana L. Bravo</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="inner.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 <body>
 
   <header class="nav-wrapper">
     <nav class="nav-pill" role="navigation">
-      <span class="nav-logo">JB.</span>
       <div class="nav-links">
         <a href="index.html"    class="nav-link page-link">Home</a>
         <a href="about.html"    class="nav-link page-link">About</a>
@@ -29,7 +29,7 @@
       <div class="container">
         <span class="section-label reveal">What I've Built</span>
         <h1 class="inner-hero-title reveal">My <span class="accent-blue">Projects</span></h1>
-        <p class="inner-hero-sub reveal">A collection of systems, interfaces, and solutions built across my academic journey.</p>
+        <p class="inner-hero-sub reveal">Click any project to view its design gallery.</p>
       </div>
     </section>
 
@@ -37,14 +37,14 @@
       <div class="container">
         <div class="projects-full-grid">
 
-          <div class="proj-card reveal">
+          <div class="proj-card reveal" data-project="svs" data-title="SVS Korean Beauty Salon System">
             <div class="proj-num">01</div>
             <div class="proj-roles">
               <span class="role-pill">Full-Stack Dev</span>
               <span class="role-pill">UI/UX Designer</span>
             </div>
             <h3 class="proj-title">SVS Korean Beauty Salon Management System</h3>
-            <p class="proj-desc">A system built to streamline appointment scheduling, service management, employee attendance, inventory tracking, customer account handling, and feedback monitoring for a local salon business.</p>
+            <p class="proj-desc">A system built to streamline appointment scheduling, service management, employee attendance, inventory tracking, customer account handling, and feedback monitoring.</p>
             <div class="proj-tech">
               <span class="tech-tag">PHP</span>
               <span class="tech-tag">MySQL</span>
@@ -52,25 +52,31 @@
               <span class="tech-tag">JavaScript</span>
               <span class="tech-tag">Figma</span>
             </div>
-            <div class="proj-footer"><div class="proj-arrow">↗</div></div>
+            <div class="proj-footer">
+              <span class="proj-gallery-hint"><i class="fa-regular fa-images"></i> View Gallery</span>
+              <div class="proj-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </div>
           </div>
 
-          <div class="proj-card reveal">
+          <div class="proj-card reveal" data-project="procook" data-title="PRO COOK">
             <div class="proj-num">02</div>
             <div class="proj-roles">
               <span class="role-pill">Full-Stack Dev</span>
             </div>
             <h3 class="proj-title">PRO COOK</h3>
-            <p class="proj-desc">A web system that helps users store, organize, search, and explore their personal recipe collections. Took over an existing project, redesigning the interface and improving core features as the sole developer.</p>
+            <p class="proj-desc">A web system that helps users store, organize, search, and explore their personal recipe collections. Took over an existing project, redesigning the interface and improving core features.</p>
             <div class="proj-tech">
               <span class="tech-tag">JavaScript</span>
               <span class="tech-tag">PHP</span>
               <span class="tech-tag">MySQL</span>
             </div>
-            <div class="proj-footer"><div class="proj-arrow">↗</div></div>
+            <div class="proj-footer">
+              <span class="proj-gallery-hint"><i class="fa-regular fa-images"></i> View Gallery</span>
+              <div class="proj-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </div>
           </div>
 
-          <div class="proj-card reveal">
+          <div class="proj-card reveal" data-project="nestnova" data-title="NESTNOVA">
             <div class="proj-num">03</div>
             <div class="proj-roles">
               <span class="role-pill">Front-End Developer</span>
@@ -83,52 +89,64 @@
               <span class="tech-tag">JavaScript</span>
               <span class="tech-tag">Figma</span>
             </div>
-            <div class="proj-footer"><div class="proj-arrow">↗</div></div>
+            <div class="proj-footer">
+              <span class="proj-gallery-hint"><i class="fa-regular fa-images"></i> View Gallery</span>
+              <div class="proj-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </div>
           </div>
 
-          <div class="proj-card reveal">
+          <div class="proj-card reveal" data-project="canteen" data-title="Canteen Food Ordering System">
             <div class="proj-num">04</div>
             <div class="proj-roles">
               <span class="role-pill">UI/UX Designer</span>
             </div>
             <h3 class="proj-title">Canteen Food Ordering System</h3>
-            <p class="proj-desc">A mobile app prototype enabling students — including those with disabilities — to pre-order food, browse menu items, and pick up or receive meals without waiting in line. Focused on inclusive UX.</p>
+            <p class="proj-desc">A mobile app prototype enabling students — including those with disabilities — to pre-order food, browse menu items, and pick up or receive meals without waiting in line.</p>
             <div class="proj-tech">
               <span class="tech-tag">Figma</span>
               <span class="tech-tag">Prototyping</span>
               <span class="tech-tag">UX Research</span>
             </div>
-            <div class="proj-footer"><div class="proj-arrow">↗</div></div>
+            <div class="proj-footer">
+              <span class="proj-gallery-hint"><i class="fa-regular fa-images"></i> View Gallery</span>
+              <div class="proj-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </div>
           </div>
 
-          <div class="proj-card reveal">
+          <div class="proj-card reveal" data-project="yume" data-title="yUM-e: Online Food Ordering System">
             <div class="proj-num">05</div>
             <div class="proj-roles">
               <span class="role-pill">System Researcher</span>
             </div>
             <h3 class="proj-title">yUM-e: Online Food Ordering System</h3>
-            <p class="proj-desc">An online ordering system for students, ensuring convenient and seamless transactions. Contributed to system documentation, data gathering, and key design decisions throughout the project lifecycle.</p>
+            <p class="proj-desc">An online ordering system for students, ensuring convenient and seamless transactions. Contributed to system documentation, data gathering, and key design decisions.</p>
             <div class="proj-tech">
               <span class="tech-tag">Java</span>
               <span class="tech-tag">Documentation</span>
             </div>
-            <div class="proj-footer"><div class="proj-arrow">↗</div></div>
+            <div class="proj-footer">
+              <span class="proj-gallery-hint"><i class="fa-regular fa-images"></i> View Gallery</span>
+              <div class="proj-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </div>
           </div>
 
-          <div class="proj-card reveal">
+          <div class="proj-card reveal" data-project="pneumonia" data-title="Pneumonia Classification System">
             <div class="proj-num">06</div>
             <div class="proj-roles">
               <span class="role-pill">Researcher</span>
               <span class="role-pill">ML</span>
             </div>
             <h3 class="proj-title">Pneumonia Classification System</h3>
-            <p class="proj-desc">A machine learning system for pneumonia classification from chest X-ray images. Contributed to system documentation, research, and data gathering to support model development and evaluation.</p>
+            <p class="proj-desc">A machine learning system for pneumonia classification from chest X-ray images. Contributed to system documentation, research, and data gathering to support model development.</p>
             <div class="proj-tech">
               <span class="tech-tag">Python</span>
               <span class="tech-tag">Machine Learning</span>
               <span class="tech-tag">Research</span>
             </div>
-            <div class="proj-footer"><div class="proj-arrow">↗</div></div>
+            <div class="proj-footer">
+              <span class="proj-gallery-hint"><i class="fa-regular fa-images"></i> View Gallery</span>
+              <div class="proj-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </div>
           </div>
 
         </div>
@@ -138,39 +156,61 @@
   </main>
 
   <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-top">
-        <div class="footer-col">
-          <div class="footer-logo-mark">JB</div>
-          <p class="footer-tagline">Building clean, user-centered experiences — one line of code at a time.</p>
-          <div class="footer-socials">
-            <a href="https://github.com/jnbrv" target="_blank" rel="noopener" aria-label="GitHub">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
-            </a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h4>Navigate</h4>
-          <a href="index.html" class="page-link">Home</a>
-          <a href="about.html" class="page-link">About</a>
-          <a href="resume.html" class="page-link">Resume</a>
-          <a href="projects.html">Projects</a>
-          <a href="contact.html" class="page-link">Contact</a>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <a href="tel:09948143839">09948143839</a>
-          <a href="mailto:j.bravo.546336@umindanao.edu.ph">j.bravo.546336@umindanao.edu.ph</a>
-          <p>Buhangin, Davao City, PH</p>
+  <div class="footer-inner">
+    <div class="footer-top">
+
+      <div class="footer-col">
+        <p class="footer-tagline">Building clean, user-centered experiences — one line of code at a time.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/jnbrv" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
         </div>
       </div>
-      <div class="footer-divider"></div>
-      <div class="footer-bottom">
-        <p>Copyright © 2025 Joana L. Bravo. All Rights Reserved.</p>
-        <p>Built with 💙 and ☕</p>
+
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a class="page-link" href="index.html">Home</a>
+        <a class="page-link" href="about.html">About</a>
+        <a class="page-link" href="resume.html">Resume</a>
+        <a class="page-link" href="projects.html">Projects</a>
+        <a class="page-link" href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:09948143839">
+          <i class="fa-solid fa-phone"></i> 09948143839
+        </a>
+        <a href="mailto:joanaaabravoo@gmail.com">
+          <i class="fa-solid fa-envelope"></i> joanaaabravoo@gmail.com
+        </a>
+        <p>
+          <i class="fa-solid fa-location-dot"></i> Buhangin, Davao City, PH
+        </p>
+      </div>
+
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2025 Joana L. Bravo. All Rights Reserved.</p>
+      <p>Built with <i class="fa-solid fa-heart" style="color:var(--blue)"></i> and <i class="fa-solid fa-mug-hot" style="color:var(--amber)"></i></p>
+    </div>
+  </div>
+</footer>
+  </div>
+
+  <!-- PROJECT GALLERY MODAL -->
+  <div id="gallery-modal" class="gallery-modal" role="dialog" aria-modal="true" aria-label="Project gallery">
+    <div class="gallery-modal-inner">
+      <button class="gallery-close" id="gallery-close" aria-label="Close gallery"><i class="fa-solid fa-xmark"></i></button>
+      <h2 class="gallery-title" id="gallery-title"></h2>
+      <div class="gallery-grid" id="gallery-grid"></div>
+      <div class="gallery-empty" id="gallery-empty" style="display:none">
+        <i class="fa-regular fa-image"></i>
+        <p>No preview images available yet.<br/>Add images to <code>images/[project-folder]/</code> to display them here.</p>
       </div>
     </div>
-  </footer>
   </div>
 
   <script src="script.js"></script>
