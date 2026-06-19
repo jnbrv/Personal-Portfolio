@@ -6,12 +6,12 @@
   <title>Resume — Joana L. Bravo</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="inner.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 <body>
 
   <header class="nav-wrapper">
     <nav class="nav-pill" role="navigation">
-      <span class="nav-logo">JB.</span>
       <div class="nav-links">
         <a href="index.html"    class="nav-link page-link">Home</a>
         <a href="about.html"    class="nav-link page-link">About</a>
@@ -29,126 +29,31 @@
       <div class="container">
         <span class="section-label reveal">My Background</span>
         <h1 class="inner-hero-title reveal">My <span class="accent-blue">Resume</span></h1>
-        <p class="inner-hero-sub reveal">A full overview of my education, experience, skills, and certifications.</p>
+        <p class="inner-hero-sub reveal">View my full resume directly from Google Docs — always up to date.</p>
       </div>
     </section>
 
     <section class="resume-page-section">
       <div class="container">
-
         <div class="resume-actions reveal">
-          <button class="btn btn-primary" onclick="window.print()">Download / Print ↓</button>
+          <a href="https://docs.google.com/document/d/14McHNa8S-KevxE8WX1KZ5jRnUny5_ayT41XZXIMlXjM/export?format=pdf"
+             target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fa-solid fa-download"></i> Download PDF
+          </a>
+          <a href="https://docs.google.com/document/d/14McHNa8S-KevxE8WX1KZ5jRnUny5_ayT41XZXIMlXjM/edit?usp=sharing"
+             target="_blank" rel="noopener" class="btn btn-outline">
+            <i class="fa-brands fa-google-drive"></i> Open in Google Docs
+          </a>
         </div>
 
-        <div class="resume-doc reveal" id="resume-print-area">
-
-          <div class="resume-header-block">
-            <h2 class="resume-name">Joana L. Bravo</h2>
-            <div class="resume-contact-row">
-              <span>📍 Buhangin, Davao City</span>
-              <span>📞 09948143839</span>
-              <a href="mailto:j.bravo.546336@umindanao.edu.ph">✉️ j.bravo.546336@umindanao.edu.ph</a>
-              <a href="https://github.com/jnbrv" target="_blank" rel="noopener">🔗 github.com/jnbrv</a>
-            </div>
-          </div>
-
-          <div class="resume-block">
-            <h3 class="resume-sec-title">Personal Profile</h3>
-            <p style="font-size:0.93rem; color:var(--gray); line-height:1.72">
-              Motivated and dedicated Computer Science student seeking internship opportunities to apply
-              technical knowledge and further develop practical skills in software development, quality
-              assurance, and user-centered design. Experienced in academic projects involving web
-              development, database management, and UI/UX design.
-            </p>
-          </div>
-
-          <div class="resume-block">
-            <h3 class="resume-sec-title">Education</h3>
-            <div class="resume-entry">
-              <div class="resume-entry-header">
-                <strong>University of Mindanao (Matina Campus)</strong>
-                <span>2023 – Present</span>
-              </div>
-              <em>Bachelor of Science in Computer Science</em>
-            </div>
-            <div class="resume-entry">
-              <div class="resume-entry-header">
-                <strong>Carlos P. Garcia Senior High School</strong>
-                <span>Graduated 2023</span>
-              </div>
-              <em>Senior High School — STEM Strand</em>
-            </div>
-            <div class="resume-entry">
-              <div class="resume-entry-header">
-                <strong>Sta. Ana National High School</strong>
-                <span>Graduated 2021</span>
-              </div>
-              <em>Junior High School</em>
-            </div>
-            <div class="resume-entry">
-              <div class="resume-entry-header">
-                <strong>Paradise Embac Elementary School</strong>
-                <span>Graduated 2017</span>
-              </div>
-              <em>Elementary Education</em>
-            </div>
-          </div>
-
-          <div class="resume-block">
-            <h3 class="resume-sec-title">Experience</h3>
-            <div class="resume-entry">
-              <div class="resume-entry-header">
-                <strong>Academic Project Experience — University of Mindanao</strong>
-                <span>2023 – 2027</span>
-              </div>
-              <ul class="resume-list">
-                <li>Collaborated with teams across 6+ academic projects, contributing to the full development lifecycle from requirements gathering to prototype delivery.</li>
-                <li>Utilized version control tools to manage shared project files and maintain code consistency.</li>
-                <li>Participated in regular project meetings to coordinate tasks and ensure timely delivery.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="resume-block">
-            <h3 class="resume-sec-title">Technical Skills</h3>
-            <div class="resume-skills-inline">
-              <span class="r-tag">HTML</span>
-              <span class="r-tag">CSS</span>
-              <span class="r-tag">JavaScript</span>
-              <span class="r-tag">PHP</span>
-              <span class="r-tag">Java</span>
-              <span class="r-tag">Python</span>
-              <span class="r-tag">MySQL</span>
-              <span class="r-tag">Figma</span>
-              <span class="r-tag">Git</span>
-              <span class="r-tag">UI/UX Design</span>
-              <span class="r-tag">System Design</span>
-              <span class="r-tag">Database Design</span>
-            </div>
-          </div>
-
-          <div class="resume-block">
-            <h3 class="resume-sec-title">Certifications</h3>
-            <div class="resume-entry">
-              <div class="resume-entry-header">
-                <strong>Information Technology Specialist — Network Security</strong>
-                <span>2026</span>
-              </div>
-            </div>
-            <div class="resume-entry">
-              <div class="resume-entry-header">
-                <strong>Information Technology Specialist — Databases</strong>
-                <span>2025</span>
-              </div>
-            </div>
-            <div class="resume-entry">
-              <div class="resume-entry-header">
-                <strong>Information Technology Specialist — Java</strong>
-                <span>2024</span>
-              </div>
-            </div>
-          </div>
-
+        <div class="resume-embed-wrap reveal">
+          <iframe
+            src="https://docs.google.com/document/d/14McHNa8S-KevxE8WX1KZ5jRnUny5_ayT41XZXIMlXjM/preview"
+            title="Joana L. Bravo — Resume"
+            class="resume-iframe"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
         </div>
       </div>
     </section>
@@ -156,39 +61,48 @@
   </main>
 
   <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-top">
-        <div class="footer-col">
-          <div class="footer-logo-mark">JB</div>
-          <p class="footer-tagline">Building clean, user-centered experiences — one line of code at a time.</p>
-          <div class="footer-socials">
-            <a href="https://github.com/jnbrv" target="_blank" rel="noopener" aria-label="GitHub">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
-            </a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h4>Navigate</h4>
-          <a href="index.html" class="page-link">Home</a>
-          <a href="about.html" class="page-link">About</a>
-          <a href="resume.html">Resume</a>
-          <a href="projects.html" class="page-link">Projects</a>
-          <a href="contact.html" class="page-link">Contact</a>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <a href="tel:09948143839">09948143839</a>
-          <a href="mailto:j.bravo.546336@umindanao.edu.ph">j.bravo.546336@umindanao.edu.ph</a>
-          <p>Buhangin, Davao City, PH</p>
+  <div class="footer-inner">
+    <div class="footer-top">
+
+      <div class="footer-col">
+        <p class="footer-tagline">Building clean, user-centered experiences — one line of code at a time.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/jnbrv" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
         </div>
       </div>
-      <div class="footer-divider"></div>
-      <div class="footer-bottom">
-        <p>Copyright © 2025 Joana L. Bravo. All Rights Reserved.</p>
-        <p>Built with 💙 and ☕</p>
+
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a class="page-link" href="index.html">Home</a>
+        <a class="page-link" href="about.html">About</a>
+        <a class="page-link" href="resume.html">Resume</a>
+        <a class="page-link" href="projects.html">Projects</a>
+        <a class="page-link" href="contact.html">Contact</a>
       </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:09948143839">
+          <i class="fa-solid fa-phone"></i> 09948143839
+        </a>
+        <a href="mailto:joanaaabravoo@gmail.com">
+          <i class="fa-solid fa-envelope"></i> joanaaabravoo@gmail.com
+        </a>
+        <p>
+          <i class="fa-solid fa-location-dot"></i> Buhangin, Davao City, PH
+        </p>
+      </div>
+
     </div>
-  </footer>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2025 Joana L. Bravo. All Rights Reserved.</p>
+      <p>Built with <i class="fa-solid fa-heart" style="color:var(--blue)"></i> and <i class="fa-solid fa-mug-hot" style="color:var(--amber)"></i></p>
+    </div>
+  </div>
+</footer>
   </div>
 
   <script src="script.js"></script>
