@@ -4,7 +4,7 @@
 
 /* ── HERO ──────────────────────────────────── */
 .hero-section {
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   align-items: center;
   background: var(--white);
@@ -17,8 +17,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 64px;
-  padding-top: 40px;
-  padding-bottom: 60px;
+  padding-top: 28px;
+  padding-bottom: 36px;
 }
 
 /* Photo */
@@ -31,15 +31,7 @@
   justify-content: center;
   transition: transform 0.4s ease;
 }
-.hero-circle-bg {
-  position: absolute;
-  bottom: 0; left: 50%;
-  transform: translateX(-50%);
-  width: 300px; height: 300px;
-  background: linear-gradient(145deg, #FEF3C7, var(--amber));
-  border-radius: 50%;
-  z-index: 0;
-}
+
 .hero-avatar-placeholder {
   position: relative;
   z-index: 1;
@@ -52,7 +44,8 @@
   font-size: 5.5rem;
   font-weight: 800;
   color: var(--blue);
-  border: 3px solid rgba(0,136,255,.15);
+  border: 4px solid var(--blue);
+  box-shadow: 0 0 0 6px rgba(0,136,255,.12), 0 12px 36px rgba(0,136,255,.25);
   overflow: hidden;
 }
 .hero-avatar-placeholder img {
@@ -162,26 +155,18 @@
 .project-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
 
 .project-card-top {
-  background: linear-gradient(135deg, var(--blue-light), #c7dfff);
-  padding: 28px 24px 0;
-  height: 160px;
-  display: flex; align-items: flex-end; overflow: hidden;
+  height: 180px;
+  overflow: hidden;
+  background: var(--gray-light);
 }
-.project-card-top.alt { background: linear-gradient(135deg, var(--amber-light), #fde8a0); }
-
-.project-mock {
-  background: var(--white);
-  border-radius: 10px 10px 0 0;
-  width: 100%; padding: 12px;
-  box-shadow: 0 -4px 16px rgba(0,0,0,.08);
+.project-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s ease;
 }
-.mock-bar {
-  height: 8px; border-radius: 4px; margin-bottom: 10px;
-  background: linear-gradient(90deg, var(--blue) 30%, var(--gray-border) 30%);
-}
-.mock-content { display: flex; flex-direction: column; gap: 6px; }
-.mock-line    { height: 6px; background: var(--gray-border); border-radius: 3px; }
-.w40{width:40%}.w50{width:50%}.w60{width:60%}.w70{width:70%}.w80{width:80%}.w90{width:90%}
+.project-card:hover .project-thumb { transform: scale(1.06); }
 
 .project-card-body { padding: 20px; display: flex; flex-direction: column; gap: 10px; }
 .project-roles     { display: flex; flex-wrap: wrap; gap: 6px; }
