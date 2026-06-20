@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact — Joana L. Bravo</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="inner.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
@@ -64,20 +66,20 @@
               <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
               <div>
                 <p class="contact-label">Location</p>
-                <p>La Verna Hills Buhangin, Davao City, Philippines</p>
+                <p>La Verna Hills, Buhangin, Davao City, Philippines</p>
               </div>
             </div>
           </div>
 
           <div class="reveal-right">
-            <form class="contact-form" id="contact-form" novalidate>
+            <form class="contact-form" id="contact-form" action="https://formspree.io/f/mwvjgyrq" method="POST" novalidate>
               <div class="form-group">
                 <label for="cf-name">Your Name</label>
                 <input type="text" id="cf-name" name="name" placeholder="e.g. Juan dela Cruz" required />
               </div>
               <div class="form-group">
                 <label for="cf-email">Email Address</label>
-                <input type="email" id="cf-email" name="email" placeholder="you@gmail.com" required />
+                <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
               </div>
               <div class="form-group">
                 <label for="cf-subject">Subject</label>
@@ -85,12 +87,11 @@
               </div>
               <div class="form-group">
                 <label for="cf-msg">Message</label>
-                <textarea id="cf-msg" name="message" rows="6" placeholder="Tell me about your question, project or idea…" required></textarea>
+                <textarea id="cf-msg" name="message" rows="6" placeholder="Tell me about your project or idea…" required></textarea>
               </div>
               <button type="submit" class="btn btn-primary btn-full">
                 Send Message <i class="fa-solid fa-paper-plane"></i>
               </button>
-              <p class="form-note" id="form-status"></p>
             </form>
           </div>
 
@@ -124,14 +125,14 @@
 
       <div class="footer-col">
         <h4>Contact</h4>
-        <a href="tel:09948143839">
+        <p>
           <i class="fa-solid fa-phone"></i> 09948143839
-        </a>
+        </p>
         <a href="mailto:joanaaabravoo@gmail.com">
           <i class="fa-solid fa-envelope"></i> joanaaabravoo@gmail.com
         </a>
         <p>
-          <i class="fa-solid fa-location-dot"></i>Buhangin, Davao City, PH
+          <i class="fa-solid fa-location-dot"></i> La Verna Hills, Buhangin, Davao City, PH
         </p>
       </div>
 
