@@ -134,28 +134,11 @@ function initReveal() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        $$('.skill-fill', entry.target).forEach(animateBar);
         obs.unobserve(entry.target);
       }
     });
   }, { threshold: 0.13, rootMargin: '0px 0px -32px 0px' });
   els.forEach(el => obs.observe(el));
-}
-
-/* ── 3. SKILL BARS ───────────────────────── */
-function animateBar(bar) {
-  requestAnimationFrame(() => { bar.style.width = (bar.dataset.width || 0) + '%'; });
-}
-function initSkillBars() {
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        $$('.skill-fill', entry.target).forEach(animateBar);
-        obs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
-  $$('.skill-bar-list').forEach(el => obs.observe(el));
 }
 
 /* ── 4. NAV SHRINK ───────────────────────── */
@@ -213,43 +196,87 @@ function initTicker() {
 function initContactForm() {
   const form = $('#contact-form');
   if (!form) return;
-  const status = $('#form-status');
+
   const shakeStyle = document.createElement('style');
   shakeStyle.textContent = `@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}`;
   document.head.appendChild(shakeStyle);
 
-  form.addEventListener('submit', e => {
+  // Shared SweetAlert2 styling to match the portfolio's blue/amber theme
+  const swalTheme = {
+    confirmButtonColor: '#0088FF',
+    background: '#ffffff',
+    color: '#1A1A2E',
+    customClass: { popup: 'swal-portfolio-popup' }
+  };
+
+  function fireAlert(opts) {
+    if (typeof Swal === 'undefined') return; // graceful fallback if CDN blocked
+    Swal.fire({ ...swalTheme, ...opts });
+  }
+
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const name  = $('#cf-name').value.trim();
     const email = $('#cf-email').value.trim();
     const msg   = $('#cf-msg').value.trim();
+
     if (!name || !email || !msg) {
-      setStatus('Please fill in your name, email, and message.', 'error');
+      fireAlert({
+        iconHtml: '<i class="fa-solid fa-triangle-exclamation" style="color:#F59E0B"></i>',
+        title: 'Almost there!',
+        text: 'Please fill in your name, email, and message before sending.',
+      });
       form.style.animation = 'shake 0.4s ease';
       form.addEventListener('animationend', () => { form.style.animation = ''; }, { once: true });
       return;
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setStatus('Please enter a valid email address.', 'error');
+      fireAlert({
+        iconHtml: '<i class="fa-solid fa-envelope-circle-check" style="color:#F59E0B"></i>',
+        title: 'Check your email',
+        text: 'That email address doesn\'t look quite right. Please double-check it.',
+      });
       return;
     }
+
     const btn = form.querySelector('button[type="submit"]');
     btn.innerHTML = 'Sending… <i class="fa-solid fa-spinner fa-spin"></i>';
     btn.disabled = true;
-    setTimeout(() => {
-      setStatus('Message sent! 🎉 I\'ll get back to you soon.', 'success');
-      form.reset();
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        fireAlert({
+          iconHtml: '<i class="fa-solid fa-check" style="color:#10B981"></i>',
+          title: 'Message Sent!',
+          text: 'Thanks for reaching out — I\'ll get back to you soon.',
+          timer: 3200,
+          showConfirmButton: false,
+        });
+        form.reset();
+      } else {
+        fireAlert({
+          iconHtml: '<i class="fa-solid fa-circle-xmark" style="color:#EF4444"></i>',
+          title: 'Something went wrong',
+          text: 'Your message couldn\'t be sent. Please try again or email me directly.',
+        });
+      }
+    } catch (err) {
+      fireAlert({
+        iconHtml: '<i class="fa-solid fa-wifi" style="color:#EF4444"></i>',
+        title: 'Network Error',
+        text: 'Please check your internet connection and try again.',
+      });
+    } finally {
       btn.innerHTML = 'Send Message <i class="fa-solid fa-paper-plane"></i>';
       btn.disabled = false;
-    }, 1400);
+    }
   });
-
-  function setStatus(msg, type) {
-    if (!status) return;
-    status.textContent = msg;
-    status.className = 'form-note ' + type;
-    setTimeout(() => { status.textContent = ''; status.className = 'form-note'; }, 5000);
-  }
 }
 
 /* ── 9. GALLERY MODAL ────────────────────── */
@@ -363,7 +390,6 @@ function closeCertModal() {
 document.addEventListener('DOMContentLoaded', () => {
   initTransitions();
   initReveal();
-  initSkillBars();
   initNavShrink();
   initHeroParallax();
   initCardTilt();
