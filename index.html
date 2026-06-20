@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joana L. Bravo — Web Developer</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="home.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
@@ -48,8 +49,7 @@
             <svg class="hello-squiggle" viewBox="0 0 40 20" fill="none"><path d="M2 14 Q10 2 20 10 Q30 18 38 6" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
           </div>
           <h1 class="hero-heading">
-            I'm <span class="accent">Joana</span>,<br />
-            Aspiring Web Developer
+            I'm <span class="accent">Joana</span>
           </h1>
           <p class="hero-sub">
             CS student at the University of Mindanao — crafting clean,
@@ -84,27 +84,12 @@
           </div>
 
           <div class="skills-grid">
-            <div class="skill-bar-list reveal">
-              <div class="skill-bar-item">
-                <div class="skill-bar-label" style="color:#fff"><span>Web Development</span><span class="skill-pct">85%</span></div>
-                <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
-              </div>
-              <div class="skill-bar-item">
-                <div class="skill-bar-label" style="color:#fff"><span>UI/UX & Figma</span><span class="skill-pct">80%</span></div>
-                <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
-              </div>
-              <div class="skill-bar-item">
-                <div class="skill-bar-label" style="color:#fff"><span>Database Design</span><span class="skill-pct">78%</span></div>
-                <div class="skill-track"><div class="skill-fill" data-width="78"></div></div>
-              </div>
-              <div class="skill-bar-item">
-                <div class="skill-bar-label" style="color:#fff"><span>Full-Stack Dev</span><span class="skill-pct">75%</span></div>
-                <div class="skill-track"><div class="skill-fill" data-width="75"></div></div>
-              </div>
-              <div class="skill-bar-item">
-                <div class="skill-bar-label" style="color:#fff"><span>System Design</span><span class="skill-pct">72%</span></div>
-                <div class="skill-track"><div class="skill-fill" data-width="72"></div></div>
-              </div>
+            <div class="skill-pills-list reveal">
+              <span class="skill-pill"><i class="fa-solid fa-code"></i> Web Development</span>
+              <span class="skill-pill"><i class="fa-solid fa-pen-ruler"></i> UI/UX & Figma</span>
+              <span class="skill-pill"><i class="fa-solid fa-database"></i> Database Design</span>
+              <span class="skill-pill"><i class="fa-solid fa-layer-group"></i> Full-Stack Dev</span>
+              <span class="skill-pill"><i class="fa-solid fa-sitemap"></i> System Design</span>
             </div>
 
             <div class="skills-right reveal">
@@ -149,20 +134,12 @@
             <span class="section-label">What I've Built</span>
             <h2 class="section-title">Let's Have a Look at<br/><span class="accent-blue">My Portfolio</span></h2>
           </div>
-          <a href="projects.html" class="btn btn-outline page-link">See All <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
         <div class="projects-preview-grid">
           <div class="project-card reveal" data-project="svs" style="--delay:0ms">
             <div class="project-card-top">
-              <div class="project-mock">
-                <div class="mock-bar"></div>
-                <div class="mock-content">
-                  <div class="mock-line w80"></div>
-                  <div class="mock-line w60"></div>
-                  <div class="mock-line w70"></div>
-                </div>
-              </div>
+              <img src="images/beauty_salon/appointments.png" alt="SVS Korean Beauty Salon System preview" class="project-thumb" />
             </div>
             <div class="project-card-body">
               <div class="project-roles">
@@ -175,15 +152,8 @@
           </div>
 
           <div class="project-card reveal" data-project="procook" style="--delay:100ms">
-            <div class="project-card-top alt">
-              <div class="project-mock">
-                <div class="mock-bar"></div>
-                <div class="mock-content">
-                  <div class="mock-line w70"></div>
-                  <div class="mock-line w90"></div>
-                  <div class="mock-line w50"></div>
-                </div>
-              </div>
+            <div class="project-card-top">
+              <img src="images/procook/procook-admin.png" alt="PRO COOK preview" class="project-thumb" />
             </div>
             <div class="project-card-body">
               <div class="project-roles">
@@ -196,14 +166,7 @@
 
           <div class="project-card reveal" data-project="nestnova" style="--delay:200ms">
             <div class="project-card-top">
-              <div class="project-mock">
-                <div class="mock-bar"></div>
-                <div class="mock-content">
-                  <div class="mock-line w60"></div>
-                  <div class="mock-line w80"></div>
-                  <div class="mock-line w40"></div>
-                </div>
-              </div>
+              <img src="images/nestnova/landing page.png" alt="NESTNOVA preview" class="project-thumb" />
             </div>
             <div class="project-card-body">
               <div class="project-roles">
@@ -333,14 +296,14 @@
 
       <div class="footer-col">
         <h4>Contact</h4>
-        <a href="tel:09948143839">
+        <p>
           <i class="fa-solid fa-phone"></i> 09948143839
-        </a>
+        </p>
         <a href="mailto:joanaaabravoo@gmail.com">
           <i class="fa-solid fa-envelope"></i> joanaaabravoo@gmail.com
         </a>
         <p>
-          <i class="fa-solid fa-location-dot"></i> Buhangin, Davao City, PH
+          <i class="fa-solid fa-location-dot"></i> La Verna Hills, Buhangin, Davao City, PH
         </p>
       </div>
 
